@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    order: 1px solid red;
+    z-index: 9;
+    overflow: hidden;
+}
+
+
+
+html {
+    margin: 0;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgb(135, 255, 135), rgb(31, 78, 47));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::before {
+    position:absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(135deg, rgb(76, 76, 255), rgb(1, 1, 54));
+    z-index: -1;
+    opacity: 0;
+    transition: 
+    opacity 1s;
+}
+
+body.dark-mode::before {
+    opacity: 1;
+}
+
+
+header {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(214, 214, 214);
+    width: 140px;
+    height: 100%;
+    transition: 
+    background-color 1s ease;
+}
+
+#light-off {
+    cursor: pointer;
+    border-radius: 10%;
+    width: 75px;
+    height: 50px;
+    margin-top: 12px;
+    margin-left: 18px;
+    display: none;
+    box-shadow: -2.5px 5px 15px rgb(50, 50, 50);
+    opacity: .8;
+    transition: 
+    margin-top .25s,
+    box-shadow .25s
+}
+
+
+#light-on {
+    cursor: pointer;
+    border-radius: 10%;
+    width: 75px;
+    height: 50px;
+    margin-top: 12px;
+    margin-left: 18px;
+    box-shadow: -2.5px 5px 15px rgb(50, 50, 50);
+    display: inline;
+    transition: 
+    margin-top .25s,
+    box-shadow .25s
+}
+
+nav {
+    position: relative;
+    margin-top: 12px
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+main {
+    width: calc(100vw - 200px);
+    float: right;
+    margin-top: 150px;
+}
+
+#intro {
+    padding-left: 100px;
+}
+
+
+h1, h2 {
+  
+}
+
+h2 {
+
+    font-size: 2rem;
+    font-family: 'Spline Sans Mono';
+}
+
+h1 {
+
+    font-size: 4rem;
+    font-family: 'Kiwi Maru';
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Noto Serif Bengali';
+    font-size: 1.2rem;
+    margin: 100px;
+    width: 800px;
+}
