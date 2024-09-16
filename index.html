@@ -1,9 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./resources/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <header id="header">
+        <img id="light-off"  src="./resources/Images/lightsout.jpg" alt="light bulb off" title="Turn on the light!">
+        <img id="light-on" src="./resources/Images/lightson.jpg" alt="light bulb on" title="Turn off the light!">
+        
+        <nav>
+            <ul id="nav-options">
+                <a href="#about-me"><li>About Me</li></a>
+                <a href="#"><li>Projects</li></a>
+                <a href="#"><li>Contact Me</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="intro">
+            <h2 id="hey" >Hello, World</h2>
+            <h1>I'm Chris, web developer</h1>
+        </div>
+        
+        <section id="about-me">
+            <p>Welcome to my page! I'm an aspiring software developer from beautiful East Tennessee, studying both Front and Back End development.
+            Currently, I am versed in HTML, CSS and intermediate level JavaScript, but all these skills will continue to develop. I do also have familiarity with using both Git and Github!
+            I will continue updating this page as my skills develop into that of a more seasoned and complete developer, and it'll be a pleasure to have you along for the ride with me!
+            </p>
+        </section>
+    </main>
 
-<body>
-  <h1>billions8491</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <script>
+        // "bright" and "dark" refer to the light bulb images being used to depict the button
+
+        let bright = document.getElementById('light-on');
+        let dark = document.getElementById('light-off');
+        let header = document.getElementById('header');
+        let body = document.getElementById('body')
+
+        function buttonPress(button) {
+            button.style.boxShadow = 'none';
+            button.style.marginTop = '14px';
+        }
+        function buttonRelease(button, otherButton, isDarkMode) {
+            button.style.marginTop = '12px';
+            button.style.boxShadow = '-2.5px 5px 15px rgb(50, 50, 50)';
+            button.style.display = 'none';
+
+            otherButton.style.display = 'inline';
+            
+            // toggles header to change color based on dark or light mode being active
+            header.style.backgroundColor = isDarkMode ? 'rgb(90, 90, 90)' : 'rgb(214, 214, 214)';
+
+            // toggles background color change
+            body.classList.toggle('dark-mode');
+        }
+     
+        
+        bright.addEventListener('mousedown', () => buttonPress(bright));
+        bright.addEventListener('mouseup', () => buttonRelease(bright, dark, true))
+       
+
+        dark.addEventListener('mousedown', () => buttonPress(dark));
+        dark.addEventListener('mouseup', () => buttonRelease(dark, bright, false));
+    </script>
 </body>
-
 </html>
