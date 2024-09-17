@@ -15,9 +15,14 @@ body {
     position: relative;
     margin: 0;
     height: 100vh;
-    background-image: linear-gradient(135deg, rgb(135, 255, 135), rgb(31, 78, 47));
+    background-image: linear-gradient(135deg, rgba(135, 255, 135, .8), rgba(31, 78, 47, 1));
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+body.dark-mode::before {
+    opacity: 1;
 }
 
 body::before {
@@ -34,16 +39,15 @@ body::before {
     opacity 1s;
 }
 
-body.dark-mode::before {
-    opacity: 1;
-}
+
 
 
 header {
     position: relative;
     display: inline-block;
-    background-color: rgb(214, 214, 214);
-    width: 140px;
+    background-color: rgba(255, 200, 0, .6);
+    border-right: 4px groove brown;
+    width: 150px;
     height: 100%;
     transition: 
     background-color 1s ease;
@@ -55,7 +59,7 @@ header {
     width: 75px;
     height: 50px;
     margin-top: 12px;
-    margin-left: 18px;
+    margin-left: 28px;
     display: none;
     box-shadow: -2.5px 5px 15px rgb(50, 50, 50);
     opacity: .8;
@@ -71,7 +75,7 @@ header {
     width: 75px;
     height: 50px;
     margin-top: 12px;
-    margin-left: 18px;
+    margin-left: 28px;
     box-shadow: -2.5px 5px 15px rgb(50, 50, 50);
     display: inline;
     transition: 
@@ -80,23 +84,50 @@ header {
 }
 
 nav {
-    position: relative;
-    margin-top: 12px
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: 100%;
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    
 }
 
-nav li {
-    list-style: none;
-}
-
-nav a {
+a {
     text-decoration: none;
-    color: darkblue;
+    position: relative;
+    right: 10px;
+}
+
+li {
+    
+    list-style: none;
+    color: rgb(0, 128, 0);
+    font-family: 'Noto Serif Bengali';
+    width: 100%;
+    height: auto;
+    border: 2px solid transparent;
+    border-radius: 10%;
+    transition: border-color .3s ease;
+    text-align: center;
+    line-height: 35px;
+    padding-inline: 5px;
+    white-space: nowrap;
+}
+
+
+
+
+li:hover {
+    border: 2px solid white;
 }
 
 main {
