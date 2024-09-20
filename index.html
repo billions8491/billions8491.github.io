@@ -91,9 +91,16 @@
         spinLetters.forEach(letter => {
             letter.addEventListener('mouseover', () => {
                 letter.style.transform = 'rotateY(180deg)';
+                letter.style.pointerEvents = 'none';
+                setTimeout(() => {
+                    letter.style.pointerEvents = 'auto';
+                }, 300);
             });
             letter.addEventListener('mouseout', () => {
-                letter.style.transform = 'rotateY(360deg)'
+                setTimeout(() => {
+                    letter.style.transform = 'rotateY(360deg)'
+                }, 300);
+                
             });
         });
         
