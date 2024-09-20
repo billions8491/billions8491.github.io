@@ -41,7 +41,7 @@ main {
     height: 100vh;
     float: right;
     padding-top: 90px;
-    background-image: linear-gradient(135deg, rgba(135, 255, 135, .8), rgba(31, 78, 47, 1));
+    background-image: linear-gradient(135deg, rgba(125, 255, 125, .8), rgba(0, 40, 0, 1));
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -57,7 +57,7 @@ main::before {
     bottom: 0;
     left: 0;
     background-image: 
-    linear-gradient(135deg, rgb(76, 76, 255), rgb(0, 0, 100));
+    linear-gradient(135deg, rgb(76, 76, 255), rgb(0, 0, 175));
     opacity: 0;
     transition: 
     opacity .5s,
@@ -151,7 +151,8 @@ li:hover {
 
 
 ul#nav-options li a{
-    color: rgb(97, 97, 97);
+    font-weight: 600;
+    color: rgb(150, 51, 51);
     transition: color .5s ease;
 }
 
@@ -198,7 +199,7 @@ h1.dark-mode {
 
 span {
     display: inline-block;
-    transition: transform .6s ease;
+    transition: transform .3s ease;
     transform-style: preserve-3d;
 }
 
