@@ -57,7 +57,7 @@ main::before {
     bottom: 0;
     left: 0;
     background-image: 
-    linear-gradient(135deg, rgb(76, 76, 255), rgb(0, 0, 175));
+    linear-gradient(135deg, rgb(20, 20, 100), rgb(0, 0, 25));
     opacity: 0;
     transition: 
     opacity .5s,
@@ -65,7 +65,7 @@ main::before {
 }
 
 main.dark-mode::before {
-    opacity: .5;
+    opacity: .8;
 }
 
 #header {
@@ -88,7 +88,7 @@ main.dark-mode::before {
     margin-left: 28px;
     display: none;
     box-shadow: -2.5px 5px 15px rgb(50, 50, 50);
-    opacity: .8;
+    opacity: 1;
     transition: 
     margin-top .25s,
     box-shadow .25s
@@ -101,7 +101,7 @@ main.dark-mode::before {
     height: 50px;
     margin-top: 12px;
     margin-left: 28px;
-    box-shadow: -2.5px 5px 15px rgb(50, 50, 50);
+    box-shadow: 0px 0px 15px 3px rgb(50, 50, 50);
     display: inline;
     transition: 
     margin-top .25s,
@@ -132,32 +132,58 @@ a {
     font-size: 18px;
     font-weight: 450;
     text-align: center;
-    line-height: 35px;
+    line-height: 50px;
     padding-inline: 15px;
     white-space: nowrap;
 }
 
+/****         SIDE BAR         ****/
+
 li {
     position: relative;
     right: 30px;
-    border: 3px solid transparent;
-    border-radius: 15px;
-    transition: border-color .3s ease;
-}
-
-li:hover {
-    border: 3px solid white;
 }
 
 
 ul#nav-options li a{
+    display: inline-block;
     font-weight: 600;
-    color: rgb(150, 51, 51);
-    transition: color .5s ease;
+    color: rgb(255, 255, 170);
+    text-shadow: 
+    0 5px 5px black;
+    transition: 
+    transform .3s ease-in-out,
+    color .3s ease,
+    text-shadow .3s ease-in-out;
+}
+
+ul#nav-options li a:hover {
+    transform: scale(1.05);
+    text-shadow: 0 5px 6px black;
 }
 
 ul#nav-options li a.dark-mode {
-    color: rgb(255, 255, 255);
+    color: rgb(236, 235, 235);
+    border-radius: 25px;
+    text-shadow: 
+    0 0 5px rgba(255, 255, 100, .6),
+    0 0 10px rgba(255, 255, 100, 1),
+    0 0 20px rgb(255, 255, 100);
+    transition: 
+    color .3s ease-in-out,
+    transform .3s ease-in-out,
+    text-shadow .3s ease-in-out;
+}
+
+ul#nav-options li a.dark-mode:hover {
+    color: white;
+    text-shadow: 
+    0 0 5px rgba(255, 255, 100, 1),
+    0 0 10px rgba(255, 255, 100, 1),
+    0 0 20px rgb(255, 255, 100),
+    0 0 30px rgb(255, 255, 100),
+    0 0 40px rgb(255, 255, 100);
+
 }
 
 #intro {

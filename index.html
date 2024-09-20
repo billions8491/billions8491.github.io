@@ -79,15 +79,13 @@
             main.classList.toggle('dark-mode');
         };
 
-        
-        
         bright.addEventListener('mousedown', () => buttonPress(bright));
         bright.addEventListener('mouseup', () => buttonRelease(bright, dark, true));
-       
-
+    
         dark.addEventListener('mousedown', () => buttonPress(dark));
         dark.addEventListener('mouseup', () => buttonRelease(dark, bright, false));
 
+        // each letter in "developer" spins 360deg upon mouseover/mouseout
         spinLetters.forEach(letter => {
             letter.addEventListener('mouseover', () => {
                 letter.style.transform = 'rotateY(180deg)';
@@ -103,7 +101,7 @@
                 
             });
         });
-        
+
     </script>
 </body>
 </html>
