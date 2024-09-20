@@ -23,14 +23,14 @@
             <ul id="nav-options">
                 <li><a href="#about-me">about me</a></li>
                 <li><a href="#">projects</a></li>
-                <li><a href="#">contact Me</a></li>
+                <li><a href="#">contact me</a></li>
             </ul>
         </nav>
     </header>
     <main id="main">
         <div id="intro">
             <h2 id="hey" >Hello, World</h2>
-            <h1 id="my-name" >I'm Chris, web <img class="enter-arrow" src="Images/enterArrow.svg"> <span class="span-wrapper"></span><span>d</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span></span></h1>
+            <h1 id="my-name"><span>I'm Chris, web</span><img class="enter-arrow" src="Images/enterArrow.svg"> <span class="span-wrapper"><span>d</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span></span></h1>
         </div>
         
         <section id="about-me">
@@ -52,7 +52,8 @@
         let h1 = document.getElementById('my-name');
         let h2 = document.getElementById('hey');
         let p = document.getElementById('blurb');
-        let spinLetters = document.querySelectorAll('span');
+        let spinLetters = document.querySelectorAll('.span-wrapper span');
+        let body = document.getElementById('body');
 
         function buttonPress(button) {
             button.style.boxShadow = 'none';
@@ -64,10 +65,7 @@
             button.style.display = 'none';
 
             otherButton.style.display = 'inline';
-            
-            // toggles header to change color based on dark or light mode being active
-            //header.style.backgroundColor = isDarkMode ? 'rgba(110, 110, 110, .7)' : 'rgba(255, 200, 0, .6)';
-
+        
             navLinks.forEach(link => {
                 link.classList.toggle('dark-mode');
             });
@@ -77,13 +75,14 @@
             p.classList.toggle('dark-mode');
 
             // toggles background color change
+            body.classList.toggle('dark-mode');
             main.classList.toggle('dark-mode');
-        }
+        };
 
         
         
         bright.addEventListener('mousedown', () => buttonPress(bright));
-        bright.addEventListener('mouseup', () => buttonRelease(bright, dark, true))
+        bright.addEventListener('mouseup', () => buttonRelease(bright, dark, true));
        
 
         dark.addEventListener('mousedown', () => buttonPress(dark));
