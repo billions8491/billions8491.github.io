@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    order: 1px solid red;
     overflow: hidden;
 }
 
@@ -219,9 +218,6 @@ h1.dark-mode {
     color: #a3f7ff;
 }
 
-.span-wrapper {
-    display: block;
-}
 
 span {
     display: inline-block;
@@ -236,11 +232,26 @@ h2:hover {
 
 /*      IMAGE OF "ENTER" ARROW         */
 
-.enter-arrow {
+#enter-arrow {
     position:absolute;
-    top: 315px;
-    right: 900px;
+    top: 350px;
+    right: 965px;
+    z-index: 1;
+    transition: all .5s ease;
+    cursor: pointer;
 }
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+    50% {transform: translateX(20px);
+    }
+    100% {transform: translateX(0);
+    }
+}
+
+
 
 p {
     position: absolute;

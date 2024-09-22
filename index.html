@@ -30,7 +30,20 @@
     <main id="main">
         <div id="intro">
             <h2 id="hey" >Hello, World</h2>
-            <h1 id="my-name"><span>I'm Chris, web</span><img class="enter-arrow" src="Images/enterArrow.svg"> <span class="span-wrapper"><span>d</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span></span></h1>
+            <h1 id="my-name">
+                <span>I'm Chris, web</span>
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                width="120.000000pt" height="150.000000pt" viewBox="48 35 105.000000 130.000000"
+                preserveAspectRatio="xMidYMid meet" id="enter-arrow">
+               <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
+               fill="#000000" stroke="none">
+               <path d="M1300 1250 l0 -400 -200 0 -200 0 0 152 0 153 -202 -203 -203 -202
+               203 -202 202 -203 0 153 0 152 300 0 300 0 0 500 0 500 -100 0 -100 0 0 -400z"/>
+               </g>
+               </svg>
+               <div id="span-wrapper"><span>d</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
+               </div>
+            </h1>
         </div>
         
         <section id="about-me">
@@ -44,16 +57,17 @@
     <script>
         // "bright" and "dark" refer to the light bulb images being used to depict the button
 
-        let bright = document.getElementById('light-on');
-        let dark = document.getElementById('light-off');
-        let header = document.getElementById('header');
-        let main = document.getElementById('main');
-        let navLinks = document.querySelectorAll('ul#nav-options li a');
-        let h1 = document.getElementById('my-name');
-        let h2 = document.getElementById('hey');
-        let p = document.getElementById('blurb');
-        let spinLetters = document.querySelectorAll('.span-wrapper span');
-        let body = document.getElementById('body');
+        const bright = document.getElementById('light-on');
+        const dark = document.getElementById('light-off');
+        const header = document.getElementById('header');
+        const main = document.getElementById('main');
+        const navLinks = document.querySelectorAll('ul#nav-options li a');
+        const h1 = document.getElementById('my-name');
+        const h2 = document.getElementById('hey');
+        const p = document.getElementById('blurb');
+        const body = document.getElementById('body');
+        const enterArrow = document.getElementById('enter-arrow');
+        const spinLetters = document.querySelectorAll('#span-wrapper span');
 
         function buttonPress(button) {
             button.style.boxShadow = 'none';
@@ -101,6 +115,9 @@
                 
             });
         });
+
+
+       // const reverseSpin = 
 
     </script>
 </body>
