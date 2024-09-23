@@ -237,9 +237,9 @@ h2:hover {
 /*      IMAGE OF "ENTER" ARROW         */
 
 #enter-arrow {
-    position:absolute;
-    top: 350px;
-    right: 965px;
+    position: relative;
+    top: 160px;
+    right: 100px;
     z-index: 1;
     transition: all .5s ease-in-out;
     cursor: pointer;
