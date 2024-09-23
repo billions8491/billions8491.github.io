@@ -221,8 +221,12 @@ h1.dark-mode {
 
 span {
     display: inline-block;
-    transition: transform .3s ease;
+    transition: transform .25s;
     transform-style: preserve-3d;
+}
+
+#span-wrapper span {
+    margin-inline-end: 6px;
 }
 
 #my-name span:hover,
@@ -237,19 +241,11 @@ h2:hover {
     top: 350px;
     right: 965px;
     z-index: 1;
-    transition: all .5s ease;
+    transition: all .5s ease-in-out;
     cursor: pointer;
 }
 
-@keyframes moveArrow {
-    0% {
-        transform: translateX(0);
-    }
-    50% {transform: translateX(20px);
-    }
-    100% {transform: translateX(0);
-    }
-}
+
 
 
 

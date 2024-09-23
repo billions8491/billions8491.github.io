@@ -68,6 +68,7 @@
         const body = document.getElementById('body');
         const enterArrow = document.getElementById('enter-arrow');
         const spinLetters = document.querySelectorAll('#span-wrapper span');
+        const spinLettersArray = Array.from(spinLetters);
 
         function buttonPress(button) {
             button.style.boxShadow = 'none';
@@ -117,7 +118,26 @@
         });
 
 
-       // const reverseSpin = 
+       enterArrow.addEventListener('click', () =>{
+        enterArrow.style.transform = 'translateX(60px)';
+        setTimeout(() => {
+            enterArrow.style.transform = 'translateX(0px)';
+        }, 501);
+        setTimeout(() => {
+            let timer1 = -60;
+            let timer2 = 500;
+            for(let i = spinLettersArray.length - 1; i >= 0; i--){
+                timer1 += 60;
+                timer2 += 60;
+                setTimeout(() => {
+                    spinLettersArray[i].style.transform = 'rotateY(180deg)';
+                }, timer1);
+                setTimeout(() => {
+                    spinLettersArray[i].style.transform = 'rotateY(0deg)';
+                }, timer2);
+            }
+            }, 1000);
+       }) 
 
     </script>
 </body>
