@@ -19,7 +19,7 @@
         <img id="light-off"  src="Images/lightsout.jpg" alt="light bulb off" title="Turn on the light!">
         <img id="light-on" src="Images/lightson.jpg" alt="light bulb on" title="Turn off the light!">
         
-        <nav>
+        <nav id="nav">
             <ul id="nav-options">
                 <li><a href="#about-me">about me</a></li>
                 <li><a href="#">projects</a></li>
@@ -44,14 +44,11 @@
                <div id="span-wrapper"><span>d</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
                </div>
             </h1>
-        </div>
-        
-        <section id="about-me">
             <p id="blurb">Welcome to my page! I'm an aspiring software developer from beautiful East Tennessee, studying both Front and Back End development.
-            Currently, I am versed in HTML, CSS and intermediate level JavaScript, but all these skills will continue to develop. I do also have familiarity with using both Git and Github!
-            I will continue updating this page as my skills develop into that of a more seasoned and complete developer, and it'll be a pleasure to have you along for the ride with me!
-            </p>
-        </section>
+                Currently, I am versed in HTML, CSS and intermediate level JavaScript, but all these skills will continue to develop. I do also have familiarity with using both Git and Github!
+                I will continue updating this page as my skills develop into that of a more seasoned and complete developer, and it'll be a pleasure to have you along for the ride with me!
+            </p> 
+        </div>
     </main>
 
     <script>
@@ -69,6 +66,8 @@
         const enterArrow = document.getElementById('enter-arrow');
         const spinLetters = document.querySelectorAll('#span-wrapper span');
         const spinLettersArray = Array.from(spinLetters);
+        const li = document.querySelectorAll('li');
+        
 
         function buttonPress(button) {
             button.style.boxShadow = 'none';
@@ -87,6 +86,9 @@
 
             h1.classList.toggle('dark-mode');
             h2.classList.toggle('dark-mode');
+            li.forEach(element => {
+                element.classList.toggle('dark-mode');
+            });
             p.classList.toggle('dark-mode');
 
             // toggles background color change
@@ -118,11 +120,28 @@
         });
 
 
+
+
+        // ENTER ARROW + "DEVELOPER" ANIMATION 
+
+        const mobileScreen = window.matchMedia('(max-width: 500px)');
+        let moveDistance;
+
+        if (mobileScreen.matches) {
+            moveDistance = 20;
+        } else {
+            moveDistance = 60;
+        }
+
        enterArrow.addEventListener('click', () =>{
-        enterArrow.style.transform = 'translateX(60px)';
+
+        enterArrow.style.transform = `translateX(${moveDistance}px)`;
+
         setTimeout(() => {
             enterArrow.style.transform = 'translateX(0px)';
         }, 501);
+
+
         setTimeout(() => {
             let timer1 = -60;
             let timer2 = 500;
