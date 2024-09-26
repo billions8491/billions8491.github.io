@@ -110,7 +110,7 @@ html {
 body {
     position: relative;
     margin: 0;
-    height: 100svh;
+    height: 100dvh;
 
 }
 
@@ -135,7 +135,7 @@ body.dark-mode::before {
 main {
     position: absolute;
     width: 100vw;
-    height: 100svh;
+    height: 100%;
     float: none;
     top: 0;
     background-image: linear-gradient(135deg, rgba(125, 255, 125, .8), rgba(0, 40, 0, 1));
@@ -241,9 +241,16 @@ p {
     font-family: 'Source Code Pro';
     font-weight: 600;
     font-size: 1.2rem;
-    text-align:justify;
     color: #E0FFFF;
     transition: color 1s ease;
+}
+
+p::first-letter{
+    font-size: 3rem;
+    font-weight: 400;
+    float: left;
+    margin-right: .625rem;
+    line-height: .8;
 }
 
 p.dark-mode {
