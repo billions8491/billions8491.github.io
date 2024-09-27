@@ -71,8 +71,8 @@ html {
         justify-content: center;
         align-items: center;
         height: 50%;
-        list-style: none;
-        font-size: 12px;
+        
+        font-size: .825rem;
         font-family: 'Source Code Pro';
     }
 
@@ -240,17 +240,18 @@ p {
     position: relative;
     font-family: 'Source Code Pro';
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: .875rem;
+    line-height: 1.4;
     color: #E0FFFF;
     transition: color 1s ease;
 }
 
 p::first-letter{
-    font-size: 3rem;
+    font-size: 4.125rem;
     font-weight: 400;
     float: left;
     margin-right: .625rem;
-    line-height: .8;
+    line-height: .75;
 }
 
 p.dark-mode {
