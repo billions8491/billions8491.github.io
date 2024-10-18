@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    overflow: hidden;
-    
 }
 
 html {
@@ -167,6 +165,7 @@ main.dark-mode::before {
 
 #intro {
     width: 90%;
+    height: auto;
     margin: 100px auto 0;
 }
 
@@ -188,6 +187,7 @@ h2.dark-mode {
 
 h1 {
     position: relative;
+    margin: 0;
     font-size: 4rem;
     font-family: 'New Amsterdam';
     font-weight: 500;
@@ -209,10 +209,8 @@ span {
     transform-style: preserve-3d;
 }
 
-div{
-    margin-top: 0;
+#span-wrapper {   
 }
-
 
 #span-wrapper span {
     margin-inline-end: 6px;
@@ -235,9 +233,52 @@ h2:hover {
     cursor: pointer;
 }
 
+#enter-arrow g{
+    transition: fill .6s ease;
+}
+
+#enter-arrow g.dark-mode{
+    fill: rgb(154, 250, 154);
+}
+/******************************************/
+
+
+
+section {
+    margin-top: 4rem;
+    padding-inline-start: .75rem;
+}
+
+.img-box{
+    display: inline-flex;
+    flex-direction: column;
+    float: right;
+    gap: .75rem;
+    padding-right: 1rem;
+}
+
+section img {
+    position: relative;
+
+}
+
+.img-1{
+}
+
+.img-2 {
+    object-fit:cover;
+    /* shape-outside: polygon(5% 0%, 100% 0%, 100% 100%, 50% 100%, 10% 90%); */
+    clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 50% 100%, 10% 90%);
+}
+
+.img-3 {
+    
+}
+
 
 p {
     position: relative;
+    margin-top: 3rem;
     font-family: 'Source Code Pro';
     font-weight: 600;
     font-size: .875rem;
@@ -263,9 +304,7 @@ p.dark-mode {
 
 @media only screen and (min-width: 1188px) {
 
-/* *{
-    outline: 1px yellow solid; 
-} */
+
 
 
 body {
