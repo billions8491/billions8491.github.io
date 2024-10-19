@@ -307,21 +307,24 @@ p.dark-mode {
     } */
 
     #intro,
-    section{
+    section,
+    main{
         position: relative;
     }
     #intro{
-        width: 50%;
+        width: 40%;
         margin: 0 0 0 1rem;
         display: inline-block;
-        top: 0;
+        top: 1rem;
     }
     section{
-        width: 45%;
+        width: 50%;
         display: inline-block;
         height: auto;
         margin: 0;
-        top: 6rem;
+        top: 4rem;
+        padding-inline-start: initial;
+        left: 3.5rem;
     }
     h1{
         margin-top: 2rem;
@@ -335,19 +338,22 @@ p.dark-mode {
         width: 100%;
         float: initial;
         padding-right: initial;
-        gap: 2rem;
+        justify-content: flex-end;
     }
     p{
-        margin-top: 1rem;
+        margin-top: 0;
+        text-align: justify;
     }
     main{
-        position: relative;
         top:0;
+        height: 100svh;
     }
     #header{
         position: absolute;
     }
-    
+    .img-box img{
+        transform: scale(.6);
+    }
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
