@@ -20,11 +20,9 @@
         <img id="light-on" src="Images/lightson.jpg" alt="light bulb on" title="Turn off the light!">
         
         <nav id="nav">
-            <ul id="nav-options">
-                <li><a href="#about-me">about me</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">contact me</a></li>
-            </ul>
+            <a href="#about-me">about me</a>
+            <a href="#">projects</a>
+            <a href="#">contact me</a>
         </nav>
     </header>
     <main id="main">
@@ -47,9 +45,9 @@
         </div>
         <section>
             <div class="img-box">
-                <img class="img-1" src="Images/github-light-logo.jpg" alt="GitHub logo" width="80px" height="80px">
-                <img class="img-2" src="Images/HTML5-Logo.jpg" alt="HTML5 logo" width="80px" height="80px">
-                <img class="img-3" src="Images/JS-logo.jpg" alt="JavaScript logo" width="80px" height="80px">
+                <img class="img-1" src="Images/github-light-logo.jpg" alt="GitHub logo" width="60px" height="60px">
+                <img class="img-2" src="Images/HTML5-Logo.jpg" alt="HTML5 logo" width="60px" height="60px">
+                <img class="img-3" src="Images/JS-logo.jpg" alt="JavaScript logo" width="60px" height="60px">
             </div>
             <p id="blurb">Welcome to my page! I'm an aspiring software developer from Tennessee, studying Full Stack development.
                     Currently, I am versed in HTML, CSS and intermediate level JavaScript. I also have familiarity with both Git and Github.
@@ -66,7 +64,7 @@
         const dark = document.getElementById('light-off');
         const header = document.getElementById('header');
         const main = document.getElementById('main');
-        const navLinks = document.querySelectorAll('ul#nav-options li a');
+        const navLinks = document.querySelectorAll('#nav a');
         const h1 = document.getElementById('my-name');
         const h2 = document.getElementById('hey');
         const p = document.getElementById('blurb');
@@ -89,6 +87,7 @@
 
             otherButton.style.display = 'inline';
         
+
             navLinks.forEach(link => {
                 link.classList.toggle('dark-mode');
             });
@@ -96,9 +95,7 @@
             h1.classList.toggle('dark-mode');
             h2.classList.toggle('dark-mode');
 
-            li.forEach(element => {
-                element.classList.toggle('dark-mode');
-            });
+            
             p.classList.toggle('dark-mode');
 
             // toggles background color change
