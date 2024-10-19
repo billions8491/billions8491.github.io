@@ -47,14 +47,13 @@
         </div>
         <section>
             <div class="img-box">
-            <img class="img-1" src="Images/github-light-logo.jpg" alt="GitHub logo" width="80px" height="80px">
-            <img class="img-2" src="Images/HTML5-Logo.jpg" alt="HTML5 logo" width="80px" height="80px">
-            <img class="img-3" src="Images/JS-logo.jpg" alt="JavaScript logo" width="80px" height="80px">
+                <img class="img-1" src="Images/github-light-logo.jpg" alt="GitHub logo" width="80px" height="80px">
+                <img class="img-2" src="Images/HTML5-Logo.jpg" alt="HTML5 logo" width="80px" height="80px">
+                <img class="img-3" src="Images/JS-logo.jpg" alt="JavaScript logo" width="80px" height="80px">
             </div>
-             
-            <p id="blurb">Welcome to my page! I'm an aspiring software developer from beautiful East Tennessee, studying both Front and Back End development.
-                    Currently, I am versed in HTML, CSS and intermediate level JavaScript, but all these skills will continue to develop. I do also have familiarity with using both Git and Github!
-                    I will continue updating this page as my skills develop into that of a more seasoned and complete developer, and it'll be a pleasure to have you along for the ride with me!
+            <p id="blurb">Welcome to my page! I'm an aspiring software developer from Tennessee, studying Full Stack development.
+                    Currently, I am versed in HTML, CSS and intermediate level JavaScript. I also have familiarity with both Git and Github.
+                    I will continue updating this page as my skills develop, and it'll be a pleasure to have you along for the ride with me!
             </p> 
         </section> 
         
@@ -81,10 +80,10 @@
 
         function buttonPress(button) {
             button.style.boxShadow = 'none';
-            button.style.marginTop = '14px';
+            button.style.marginTop = '10px';
         }
         function buttonRelease(button, otherButton, isDarkMode) {
-            button.style.marginTop = '12px';
+            button.style.marginTop = '8px';
             button.style.boxShadow = '0px 0px 15px 3px rgb(50, 50, 50)';
             button.style.display = 'none';
 
@@ -137,7 +136,7 @@
 
         // ENTER ARROW + "DEVELOPER" ANIMATION 
 
-        const mobileScreen = window.matchMedia('(max-width: 500px)');
+        const mobileScreen = window.matchMedia('(max-width: 896px)');
         let moveDistance;
 
         if (mobileScreen.matches) {

@@ -2,6 +2,21 @@
     box-sizing: border-box;
 }
 
+
+/*        Relatively positioned    */
+
+section img, 
+p,
+#header,
+#nav-options,
+body,
+h2,
+h1,
+span
+ {
+    position: relative;
+}
+
 html {
     margin: 0;
 }
@@ -33,7 +48,7 @@ html {
     /*   HEADER ON TOP */
 
     #header {
-        position: relative;
+
         width: 100vw;
         height: 65px;
         z-index: 1;
@@ -52,7 +67,6 @@ html {
     }
 
     #nav-options {
-        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -106,34 +120,15 @@ html {
 /*  MAIN PAGE BELOW HEADER  *********/
 
 body {
-    position: relative;
     margin: 0;
     height: 100svh;
 
 }
 
-body::before{
-    position:absolute;
-    content: '';
-    top: 0px;
-    right: 0;
-    bottom: 0;
-    left: 0px;
-    background-image: url(Images/portfolio-code-snippet.jpg);
-    background-size: cover;
-    opacity: .4;
-    transition: opacity .5s ease;
-}
-
-body.dark-mode::before {
-    opacity: 1;
-}
-
-
 main {
     position: absolute;
     width: 100vw;
-    height: 100%;
+    height: 100svh;
     float: none;
     top: 0;
     background-image: linear-gradient(135deg, rgba(125, 255, 125, .8), rgba(0, 40, 0, 1));
@@ -141,16 +136,27 @@ main {
     background-size: cover;
 }
 
-
-
-
-main::before {
+/***       Pseudo element background stylings ***/
+body::before,
+main::before{
     position:absolute;
     content: '';
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+}
+body::before{
+    background-image: url(Images/portfolio-code-snippet.jpg);
+    background-size: cover;
+    opacity: .45;
+    transition: opacity .5s ease;
+}
+body.dark-mode::before {
+    opacity: 1;
+}
+
+main::before {
     background-image: 
     linear-gradient(135deg, rgb(20, 20, 100), rgb(0, 0, 25));
     opacity: 0;
@@ -158,10 +164,11 @@ main::before {
     opacity .5s,
     background-color .5s;
 }
-
 main.dark-mode::before {
     opacity: .8;
 }
+
+
 
 #intro {
     width: 90%;
@@ -171,7 +178,6 @@ main.dark-mode::before {
 
 
 h2 {
-    position: relative;
     left: 0;
     top: 10px;
     text-align: center;
@@ -186,7 +192,6 @@ h2.dark-mode {
 }
 
 h1 {
-    position: relative;
     margin: 0;
     font-size: 4rem;
     font-family: 'New Amsterdam';
@@ -202,7 +207,6 @@ h1.dark-mode {
 }
 
 span {
-    position: relative;
     display: inline-block;
     margin: 0;
     transition: transform .25s;
@@ -240,7 +244,6 @@ h2:hover {
 #enter-arrow g.dark-mode{
     fill: rgb(154, 250, 154);
 }
-/******************************************/
 
 
 
@@ -257,10 +260,7 @@ section {
     padding-right: 1rem;
 }
 
-section img {
-    position: relative;
 
-}
 
 .img-1{
 }
@@ -277,7 +277,6 @@ section img {
 
 
 p {
-    position: relative;
     margin-top: 3rem;
     font-family: 'Source Code Pro';
     font-weight: 600;
@@ -300,18 +299,48 @@ p.dark-mode {
 }
 
 
-/*************************************************************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+@media only screen and (min-width: 768px) and (max-width: 896px) and (orientation: landscape){
+    /* *{
+        outline: red solid;
+    } */
+
+
+    #intro{
+        width: 50%;
+        margin: 0 0 0 1rem;
+        display: inline-block;
+    }
+    section{
+        width: 45%;
+        display: inline;
+        margin-top: 0;
+    }
+    h1{
+        margin-top: 2rem;
+    }
+    #enter-arrow{
+        top: 2.25rem;
+    }
+    .img-box{
+        display: flex;
+        flex-direction: row;
+        margin: 5rem 2rem 0 0;
+    }
+    p{
+        display: block;
+    }
+    
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 @media only screen and (min-width: 1188px) {
-
-
-
 
 body {
     position: relative;
     margin: 0;
     height: 100svh;
-
 }
 
 body::before{
@@ -346,7 +375,7 @@ main {
     border-radius: 10%;
     width: 75px;
     height: 50px;
-    margin-top: 12px;
+    margin-top: 8px;
     margin-left: 28px;
     display: none;
     box-shadow: 0px 0px 15px 3px rgb(50, 50, 50);
@@ -361,7 +390,7 @@ main {
     border-radius: 10%;
     width: 75px;
     height: 50px;
-    margin-top: 12px;
+    margin-top: 8px;
     margin-left: 28px;
     box-shadow: 0px 0px 15px 3px rgb(50, 50, 50);
     display: inline;
@@ -517,7 +546,3 @@ p {
     transition: color 1s ease;
 }
 }
-
-
-
-
