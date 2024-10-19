@@ -301,21 +301,27 @@ p.dark-mode {
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-@media only screen and (min-width: 768px) and (max-width: 896px) and (orientation: landscape){
+@media only screen and (min-width: 768px) and (max-width: 932px) and (orientation: landscape){
     /* *{
         outline: red solid;
     } */
 
-
+    #intro,
+    section{
+        position: relative;
+    }
     #intro{
         width: 50%;
         margin: 0 0 0 1rem;
         display: inline-block;
+        top: 0;
     }
     section{
         width: 45%;
-        display: inline;
-        margin-top: 0;
+        display: inline-block;
+        height: auto;
+        margin: 0;
+        top: 6rem;
     }
     h1{
         margin-top: 2rem;
@@ -324,12 +330,22 @@ p.dark-mode {
         top: 2.25rem;
     }
     .img-box{
-        display: flex;
         flex-direction: row;
-        margin: 5rem 2rem 0 0;
+        margin: 0 auto;
+        width: 100%;
+        float: initial;
+        padding-right: initial;
+        gap: 2rem;
     }
     p{
-        display: block;
+        margin-top: 1rem;
+    }
+    main{
+        position: relative;
+        top:0;
+    }
+    #header{
+        position: absolute;
     }
     
 }
